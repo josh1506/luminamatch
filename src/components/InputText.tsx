@@ -6,12 +6,11 @@ interface InputTextProps {
     name: string;
     inputType: string;
     isRequired: boolean;
-    placeholder: string | undefined;
 
     [key: string]: any;
 }
 
-const InputText: React.FC<InputTextProps> = ({placeholder="", label, name, inputType, isRequired, ...props}) => {
+const InputText: React.FC<InputTextProps> = ({label, name, inputType, isRequired, ...props}) => {
     return (
         <div>
             {label && (
@@ -26,7 +25,6 @@ const InputText: React.FC<InputTextProps> = ({placeholder="", label, name, input
                     sm:leading-6 px-2`, props.extraClassName)}
                     id={name}
                     name={name}
-                    placeholder={placeholder}
                     required={isRequired}
                     type={inputType}
                     {...props}
