@@ -49,6 +49,8 @@ const SignInForm: React.FC = () => {
                     <Button
                         buttonType={"submit"}
                         label={"Sign in"}
+                        buttonColor={"primary"}
+                        extraClassNames={"w-full"}
                     />
                 </div>
             </Form>
