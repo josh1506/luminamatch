@@ -12,7 +12,7 @@ const ProfileAboutSection: React.FC = () => {
 
                 <div className="flex">
                     <dt className="font-semibold">Gender:</dt>
-                    <dd className="ml-2">Male</dd>
+                    <dd className="ml-2">Female</dd>
                 </div>
             </dl>
         </div>

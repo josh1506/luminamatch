@@ -3,7 +3,7 @@ import classNames from "../services/utils/classNames.tsx";
 
 interface ButtonProps {
     label: string;
-    buttonColor?: "primary" | "secondary" | "success" | "danger" | "default"
+    buttonColor?: "primary" | "secondary" | "success" | "danger" | "default" | "none"
     buttonType?: "button" | "submit" | "reset";
 
     [key: string]: any;
@@ -20,6 +20,8 @@ const Button: React.FC<ButtonProps> = ({buttonType = "submit", buttonColor="defa
                 return "text-white bg-green-500 hover:bg-green-400 focus-visible:outline-green-500";
             case "danger":
                 return "text-white bg-red-500 hover:bg-red-400 focus-visible:outline-red-500";
+            case "none":
+                return "text-black focus-visible:outline-gray-500";
             default:
                 return "text-black border border-gay-500 bg-white hover:bg-gray-100 focus-visible:outline-gray-500";
         }
@@ -30,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({buttonType = "submit", buttonColor="defa
             type={buttonType}
             className={classNames(
                 `flex justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6
-                shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                 duration-300`,
                 handleButtonColor(buttonColor),
                 props.extraClassNames

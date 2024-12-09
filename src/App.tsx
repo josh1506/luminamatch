@@ -1,13 +1,13 @@
-import SignInPage from "./pages/SignInPage";
+import ProfilePage from "./pages/ProfilePage";
 import './index.css'
 
 function App() {
     return (
         <>
-           <SignInPage/>
+           {/*<SignInPage/>*/}
            {/* <ForgotPassPage/>*/}
            {/* <SignUpPage/>*/}
-           {/* <ProfilePage/>*/}
+            <ProfilePage/>
         </>
     )
 }
