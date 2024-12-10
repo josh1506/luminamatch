@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../components/Button.tsx";
 
 const ProfileDisplayBadge: React.FC = () => {
     const displayBadge = [
@@ -18,9 +19,12 @@ const ProfileDisplayBadge: React.FC = () => {
 
     return (
         <div className="flex flex-wrap gap-x-2 gap-y-1">
-            {displayBadge.map(badge => (
-                <div className={`flex items-center gap-1 px-4 py-2 rounded-full`}
-                     style={{backgroundColor: badge.color}}>
+            {displayBadge.map((badge, index) => (
+                <div
+                    key={index}
+                    className={`flex items-center gap-1 px-4 py-2 rounded-full ${index >= 3 ? 'hidden lg:flex' : 'flex'}`}
+                    style={{backgroundColor: badge.color}}
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -32,7 +36,7 @@ const ProfileDisplayBadge: React.FC = () => {
                         <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9
+                            d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1-3-3m9
                             0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125
                             1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454
                             7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73
@@ -46,8 +50,14 @@ const ProfileDisplayBadge: React.FC = () => {
                     <span className="text-xs">{badge.title}</span>
                 </div>
             ))}
+
+            <Button
+                label="See More Badge..."
+                extraClassNames={`font-light text-xs rounded-3xl bg-gray-300 border-none ${displayBadge.length <= 3 ? 'block' : 'lg:hidden'}`}
+            />
         </div>
     )
-};
+}
+    ;
 
-export default ProfileDisplayBadge;
+    export default ProfileDisplayBadge;

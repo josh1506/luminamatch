@@ -8,7 +8,7 @@ const ProfilePage: React.FC = () => {
         <div className="flex justify-center">
             <div className="max-w-screen-xl w-full mb-4">
                 <ProfileBanner/>
-                <div className="flex mt-3">
+                <div className="lg:flex mt-2 lg:mt-3">
                     <ProfileSummary/>
                     <ProfilePostsSection/>
                 </div>
