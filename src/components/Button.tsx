@@ -1,13 +1,6 @@
 import React from "react";
 import classNames from "../services/utils/classNames.tsx";
-
-interface ButtonProps {
-    label: string;
-    buttonColor?: "primary" | "secondary" | "success" | "danger" | "default" | "none"
-    buttonType?: "button" | "submit" | "reset";
-
-    [key: string]: any;
-}
+import {ButtonProps} from "../interfaces/components/ButtonProps.tsx";
 
 const Button: React.FC<ButtonProps> = ({buttonType = "submit", buttonColor="default", label, ...props}) => {
     const handleButtonColor = (buttonColor: string) => {

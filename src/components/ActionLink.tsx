@@ -1,13 +1,6 @@
-import React, {ReactNode} from "react";
+import React from "react";
 import classNames from "../services/utils/classNames.tsx";
-
-interface ActionLinkProps {
-    linkType?: "text" | "button";
-    link: string;
-    children: ReactNode;
-
-    [key: string]: any;
-}
+import {ActionLinkProps} from "../interfaces/components/ActionLinkProps.tsx";
 
 const ActionLink: React.FC<ActionLinkProps> = ({linkType = "text", link, children, ...props}) => {
     const handleStyle = () => {

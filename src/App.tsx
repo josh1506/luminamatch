@@ -1,4 +1,4 @@
-import ProfilePage from "./pages/ProfilePage";
+import NewsFeedPage from "./pages/NewsFeedPage";
 import './index.css'
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
            {/*<SignInPage/>*/}
            {/* <ForgotPassPage/>*/}
            {/* <SignUpPage/>*/}
-            <ProfilePage/>
+           {/* <ProfilePage/>*/}
+            <NewsFeedPage/>
         </>
     )
 }
