@@ -46,7 +46,7 @@ const LeftPanel: React.FC = () => {
     }, [showMorePanelItems])
 
     return (
-        <div className="hidden xl:flex xl:w-80 xl:flex-col gap-1 border-r px-2 py-4 overflow-x-auto">
+        <div className="hidden xl:flex xl:w-80 xl:flex-col gap-1 border-r px-2 py-4 overflow-y-auto">
             <UserSummary/>
             <hr className="my-2"/>
             {displayPanelItems.map(panelItem => (
