@@ -1,9 +1,5 @@
 import React from "react";
-
-interface LeftPanelItemProps {
-    icon: string
-    label: string
-}
+import {LeftPanelItemProps} from "../../../interfaces/pages/NewsFeedPage/LeftPanel/LeftPanelItemsProps.tsx";
 
 const LeftPanelItems: React.FC<LeftPanelItemProps> = ({icon, label}) => {
     return (

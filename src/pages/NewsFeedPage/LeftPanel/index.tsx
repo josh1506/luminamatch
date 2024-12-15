@@ -1,16 +1,11 @@
 import React, {useEffect, useState} from "react";
 import LeftPanelItems from "./LeftPanelItems.tsx";
 import UserSummary from "./UserSummary.tsx";
-
-interface PanelItem {
-    id: number
-    icon: string
-    label: string
-}
+import {PanelItemProps} from "../../../interfaces/pages/NewsFeedPage/LeftPanel/LeftPanelProps.tsx";
 
 const LeftPanel: React.FC = () => {
     const [showMorePanelItems, setShowMorePanelItems] = useState(false)
-    const [displayPanelItems, setDisplayPanelItems] = useState<PanelItem[]>([])
+    const [displayPanelItems, setDisplayPanelItems] = useState<PanelItemProps[]>([])
     const leftPanelItems = [
         {id: 1, icon: "message-icon", label: "Messages"},
         {id: 2, icon: "saved-icon", label: "Saved"},
