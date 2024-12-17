@@ -1,8 +1,8 @@
 import React from "react";
-import InputTextarea from "../../components/InputTextarea.tsx";
-import Button from "../../components/Button.tsx";
+import InputTextarea from "./InputTextarea.tsx";
+import Button from "./Button.tsx";
 
-const ProfileUserPostInput: React.FC = () => {
+const PostInputCard: React.FC = () => {
     return (
         <div className="bg-gray-200 p-4 rounded-lg pb-2">
             <InputTextarea
@@ -30,4 +30,4 @@ const ProfileUserPostInput: React.FC = () => {
     )
 }
 
-export default ProfileUserPostInput
+export default PostInputCard
