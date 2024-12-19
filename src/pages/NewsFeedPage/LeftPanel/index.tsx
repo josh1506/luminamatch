@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
-import LeftPanelItems from "./LeftPanelItems.tsx";
 import UserSummary from "./UserSummary.tsx";
+import ShortcutDisplay from "./ShortcutDisplay.tsx";
 import {PanelItemProps} from "../../../interfaces/pages/NewsFeedPage/LeftPanel/LeftPanelProps.tsx";
 
 const LeftPanel: React.FC = () => {
-    const [showMorePanelItems, setShowMorePanelItems] = useState(false)
+    const [showMorePanelItems, setShowMorePanelItems] = useState<boolean>(false)
+    const [displayShortcutIcon, setDisplayShortcutIcon] = useState<boolean>(true)
     const [displayPanelItems, setDisplayPanelItems] = useState<PanelItemProps[]>([])
     const leftPanelItems = [
         {id: 1, icon: "message-icon", label: "Messages"},
@@ -44,23 +45,19 @@ const LeftPanel: React.FC = () => {
         <div className="hidden xl:flex xl:w-80 xl:flex-col gap-1 border-r px-2 py-4 overflow-y-auto">
             <UserSummary/>
             <hr className="my-2"/>
-            {displayPanelItems.map(panelItem => (
-                <LeftPanelItems key={panelItem.id} icon={panelItem.icon} label={panelItem.label}/>
-            ))}
-            <button
-                className="flex gap-2 bg-gray-300 p-2 rounded-lg items-center hover:bg-gray-200 duration-300 cursor-pointer"
-                onClick={() => setShowMorePanelItems(!showMorePanelItems)}
-            >
-                <div>
-                    <div className={"w-10 h-10 bg-red-400 rounded-full"}>
-                    </div>
-                </div>
-                <div>
-                    <div className="font-semibold overflow-hidden text-ellipsis whitespace-nowrap w-44 text-left">
-                        {showMorePanelItems ? "See less" : "See more"}
-                    </div>
-                </div>
-            </button>
+            <div className="flex justify-between">
+                <span>Shortcut</span>
+                <button onClick={() => setDisplayShortcutIcon(!displayShortcutIcon)}>
+                    {displayShortcutIcon ? "List" : "Icons"}
+                </button>
+            </div>
+            <ShortcutDisplay
+                displayShortcutIcon={displayShortcutIcon}
+                leftPanelItems={leftPanelItems}
+                displayPanelItems={displayPanelItems}
+                showMorePanelItems={showMorePanelItems}
+                setShowMorePanelItems={setShowMorePanelItems}
+            />
         </div>
     )
 }
