@@ -1,14 +1,6 @@
 import React from "react";
 import classNames from "../services/utils/classNames.tsx";
-
-interface InputTextProps {
-    label: string;
-    name: string;
-    inputType: string;
-    isRequired: boolean;
-
-    [key: string]: any;
-}
+import {InputTextProps} from "../interfaces/components/InputTextProps.tsx";
 
 const InputText: React.FC<InputTextProps> = ({label, name, inputType, isRequired, ...props}) => {
     return (

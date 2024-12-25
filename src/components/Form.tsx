@@ -1,14 +1,6 @@
-import React, {ReactNode} from "react";
-
+import React from "react";
 import classNames from "../services/utils/classNames.tsx";
-
-interface FormProps {
-    action: string;
-    children: ReactNode;
-    method: "DELETE" | "GET" | "POST" | "PUT";
-
-    [key: string]: any;
-}
+import {FormProps} from "../interfaces/components/FormProps.tsx";
 
 const Form: React.FC<FormProps> = ({action="#", children, method, ...props}) => {
     return (
