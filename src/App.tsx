@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar.tsx";
 import NewsFeedPage from "./pages/NewsFeedPage";
-import './index.css'
+import './assets/styles/index.css'
 
 function App() {
     return (
