@@ -5,4 +5,5 @@ export interface InputTextProps {
     isRequired?: boolean;
     extraClassName?: string;
     placeholder?: string;
+    autoComplete?: string;
 }
