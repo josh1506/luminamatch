@@ -1,8 +1,8 @@
 export interface InputTextProps {
-    label: string;
+    label?: string;
     name: string;
-    inputType: string;
-    isRequired: boolean;
-
-    [key: string]: any;
+    inputType?: string;
+    isRequired?: boolean;
+    extraClassName?: string;
+    placeholder?: string;
 }

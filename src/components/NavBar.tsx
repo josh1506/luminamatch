@@ -1,4 +1,5 @@
 import React from "react";
+import InputText from "./InputText.tsx";
 
 const NavBar: React.FC = () => {
     const navList = [
@@ -11,19 +12,22 @@ const NavBar: React.FC = () => {
     ]
 
     return (
-        <header className="fixed sm:block w-full z-50 border-b">
-            <div className="flex justify-between items-center ">
+        <header className="fixed sm:block w-full z-50 h-20 bg-stone-800">
+            <div className="flex justify-between items-center h-full">
                 <div
-                    className="text-2xl font-bold text-blue-600 hidden xl:flex xl:w-80 xl:flex-col gap-1 overflow-y-auto pl-4 py-2"
+                    className="text-2xl font-bold text-white hidden xl:flex xl:w-80 xl:flex-col gap-1 overflow-y-auto pl-4 py-2 tracking-wider"
                 >
-                    <a href="#">LuminaMatch</a>
+                    <a href="#">
+                        Lumina
+                    <span className="text-purple-500">Match</span>
+                    </a>
                 </div>
 
-                <nav className="flex flex-grow overflow-y-auto justify-center">
+                <nav className="flex flex-grow overflow-y-auto justify-center xl:justify-start">
                     <ul className="flex space-x-6 text-lg lg:space-x-14">
                         {navList.map((navItem, index) => (
                             <li key={index}>
-                                <a href="#" className="hover:text-blue-600">
+                                <a href="#" className="text-white hover:text-purple-500 font-semibold tracking-wide">
                                     {navItem}
                                 </a>
                             </li>
@@ -31,10 +35,12 @@ const NavBar: React.FC = () => {
                     </ul>
                 </nav>
 
-                <div className="space-x-4 items-center hidden lg:flex overflow-y-auto w-80 justify-end pr-4 py-2">
-                    <a href="#" className="text-gray-600 hover:text-red-600">
-                        Logout
-                    </a>
+                <div className="hidden lg:block overflow-y-auto w-80 justify-end pr-4">
+                    <InputText
+                        name="search"
+                        placeholder="Search..."
+                        extraClassName="rounded-full w-full h-10"
+                    />
                 </div>
             </div>
         </header>

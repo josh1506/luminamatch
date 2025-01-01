@@ -17,31 +17,19 @@ const UserPost: React.FC = () => {
     return (
         <div className="bg-gray-200 rounded-lg px-4 pt-4 pb-2">
             <div className="flex items-center relative gap-2">
-                <div className="bg-white h-14 w-14 rounded-full overflow-hidden">
+                <div className="bg-white h-12 w-12 rounded-full overflow-hidden">
                     <ProfileAvatar/>
                 </div>
-                <div>
-                    <span className="font-semibold">Jane Doe</span>
+                <div className="flex gap-4 items-center">
+                    <span className="font-semibold max-w-44 text-ellipsis truncate">Jane Doe</span>
+                    <span>-</span>
                     <div className="flex gap-2 text-sm">
                         <span>Dec 08, 2024</span>
                         <span>12:32 AM</span>
                     </div>
                 </div>
 
-                <Button
-                    buttonType="button"
-                    buttonColor="none"
-                    label="Hide"
-                    extraClassNames="absolute top-0 right-2 px-1 py-1"
-                />
-            </div>
-            <div className="mt-4">
-                <p className="whitespace-pre-wrap">
-                    {parseParagraph(userPost)}
-                </p>
-            </div>
-            <div className="flex justify-between">
-                <div className="flex gap-2">
+                <div className="flex gap-2 absolute top-0 right-2 px-1 py-1">
                     <Button
                         buttonType="button"
                         buttonColor="none"
@@ -51,24 +39,32 @@ const UserPost: React.FC = () => {
                     <Button
                         buttonType="button"
                         buttonColor="none"
-                        label="Comment"
-                        extraClassNames="hover:bg-gray-300"
-                    />
-                    <Button
-                        buttonType="button"
-                        buttonColor="none"
                         label="Share"
                         extraClassNames="hover:bg-gray-300"
                     />
-                </div>
-                <div>
                     <Button
                         buttonType="button"
                         buttonColor="none"
-                        label="Top 3 Reaction icons"
-                        extraClassNames="hover:bg-gray-300"
+                        label="Hide"
+                        extraClassNames=""
                     />
                 </div>
+            </div>
+            <div className="mt-4">
+                <p className="whitespace-pre-wrap">
+                    {parseParagraph(userPost)}
+                </p>
+            </div>
+            <div className="flex gap-2">
+                {["React Icons", "Comments"].map((label, index) => (
+                    <Button
+                        buttonType="button"
+                        buttonColor="none"
+                        label={label}
+                        extraClassNames="hover:bg-gray-300"
+                        key={index}
+                    />
+                ))}
             </div>
         </div>
     )
