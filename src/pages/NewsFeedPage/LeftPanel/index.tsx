@@ -42,7 +42,7 @@ const LeftPanel: React.FC = () => {
     }, [showMorePanelItems])
 
     return (
-        <div className="hidden xl:flex xl:w-80 xl:flex-col gap-1 border-r px-2 py-4 overflow-y-auto">
+        <div className="hidden xl:flex xl:w-80 xl:flex-col gap-1 border-r px-2 py-4 overflow-y-auto bg-stone-700 h-full text-white">
             <UserSummary/>
             <hr className="my-2"/>
             <div className="flex justify-between">

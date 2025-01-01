@@ -4,7 +4,7 @@ import NewsFeedRightSection from "./RightPanel";
 
 const NewsFeedPage = () => {
     return (
-        <div className="flex mt-12 h-[94.5vh]">
+        <div className="flex mt-20 h-[calc(100vh-5rem)]">
             <NewsFeedLeftSection/>
             <NewsFeedMiddleSection/>
             <NewsFeedRightSection/>
