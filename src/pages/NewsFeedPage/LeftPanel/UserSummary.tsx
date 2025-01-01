@@ -3,7 +3,7 @@ import ProfileAvatar from "../../../components/ProfileAvatar.tsx";
 
 const UserSummary: React.FC = () => {
     return (
-        <div className="flex gap-2 bg-gray-300 p-2 rounded-lg">
+        <div className="flex gap-2 p-2 rounded-lg relative">
             <div>
                 <div className="w-20 h-20">
                     <ProfileAvatar/>
@@ -19,6 +19,7 @@ const UserSummary: React.FC = () => {
                     <div className="text-sm">VIP: 6</div>
                 </div>
             </div>
+            <button className="absolute bottom-0 right-0 font-bold">Logout</button>
         </div>
     )
 }
