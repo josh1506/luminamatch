@@ -11,7 +11,7 @@ export default defineConfig({
         },
     },
     plugins: [reactRouter(), tsconfigPaths()],
-    // build: {
-    //     outDir: 'build',
-    // },
+    build: {
+        outDir: 'build',
+    },
 });
