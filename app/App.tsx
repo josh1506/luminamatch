@@ -1,6 +1,5 @@
 import MessagePage from "./pages/MessagePage";
-import NavBar from "./components/NavBar.tsx";
-import './assets/styles/index.css'
+import NavBar from "~/components/NavBar";
 
 function App() {
     return (

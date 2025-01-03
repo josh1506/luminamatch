@@ -1,5 +1,5 @@
 import React from "react";
-import InputText from "./InputText.tsx";
+import InputText from "~/components/InputText";
 
 const NavBar: React.FC = () => {
     const navList = [
@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
     ]
 
     return (
-        <header className="fixed sm:block w-full z-50 h-20 bg-stone-800">
+        <header className="fixed top-0 sm:block w-full z-50 h-20 bg-stone-800">
             <div className="flex justify-between items-center h-full">
                 <div
                     className="text-2xl font-bold text-white hidden xl:flex xl:w-80 xl:flex-col gap-1 overflow-y-auto pl-4 py-2 tracking-wider"
