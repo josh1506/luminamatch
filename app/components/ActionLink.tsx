@@ -1,8 +1,9 @@
 import React from "react";
-import classNames from "../services/utils/classNames.tsx";
-import {ActionLinkProps} from "../interfaces/components/ActionLinkProps.tsx";
+import {Link} from "react-router";
+import classNames from "~/services/utils/classNames";
+import type {ActionLinkProps} from "~/interfaces/components/ActionLinkProps";
 
-const ActionLink: React.FC<ActionLinkProps> = ({linkType = "text", link, children, ...props}) => {
+const ActionLink: React.FC<ActionLinkProps> = ({linkType = "text", link, children, extraClassNames}) => {
     const handleStyle = () => {
         if (!linkType){
             return ""
@@ -18,9 +19,9 @@ const ActionLink: React.FC<ActionLinkProps> = ({linkType = "text", link, childre
     }
 
     return (
-        <a href={link} className={classNames(handleStyle(), props.extraClassNames)} {...props}>
+        <Link to={link} className={classNames(handleStyle(), extraClassNames)}>
             {children}
-        </a>
+        </Link>
     )
 }
 

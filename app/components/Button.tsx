@@ -1,6 +1,6 @@
 import React from "react";
-import classNames from "../services/utils/classNames.tsx";
-import {ButtonProps} from "../interfaces/components/ButtonProps.tsx";
+import classNames from "~/services/utils/classNames";
+import type {ButtonProps} from "~/interfaces/components/ButtonProps";
 
 const Button: React.FC<ButtonProps> = ({buttonType = "submit", buttonColor="default", label, ...props}) => {
     const handleButtonColor = (buttonColor: string) => {

@@ -1,7 +1,8 @@
 import React from "react";
-import Form from "../../components/Form.tsx";
-import InputText from "../../components/InputText.tsx";
-import Button from "../../components/Button.tsx";
+import ActionLink from "~/components/ActionLink";
+import Form from "~/components/Form";
+import InputText from "~/components/InputText";
+import Button from "~/components/Button";
 
 const ForgotPassForm: React.FC = () => {
     return (
@@ -14,11 +15,9 @@ const ForgotPassForm: React.FC = () => {
                 isRequired={true}
             />
             <div className={"flex gap-2"}>
-                <Button
-                    extraClassNames={"w-1/2"}
-                    buttonType="button"
-                    label="Cancel"
-                />
+                <ActionLink link="/login" linkType = "button">
+                    Cancel
+                </ActionLink>
                 <Button
                     extraClassNames={"w-full"}
                     buttonType="submit"

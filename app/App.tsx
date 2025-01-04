@@ -6,9 +6,6 @@ function App() {
         <>
             <NavBar/>
             <div className="mt-20 h-[calc(100vh-5rem)]">
-                {/*<SignInPage/>*/}
-                {/* <ForgotPassPage/>*/}
-                {/* <SignUpPage/>*/}
                 {/* <ProfilePage/>*/}
                 {/* <NewsFeedPage/>*/}
                 <MessagePage/>
