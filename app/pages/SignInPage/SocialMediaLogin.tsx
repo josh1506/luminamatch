@@ -1,6 +1,6 @@
 import React from "react";
-import ActionLink from "../../components/ActionLink.tsx";
-import Text from "../../components/TextHeader.tsx";
+import Text from "~/components/TextHeader";
+import ActionLink from "~/components/ActionLink";
 
 const SocialMediaLogin: React.FC = () => {
     return (

@@ -1,6 +1,9 @@
-import Button from "../../components/Button.tsx";
-import Form from "../../components/Form.tsx";
-import InputText from "../../components/InputText.tsx";
+import Form from "~/components/Form";
+import InputText from "~/components/InputText";
+import Button from "~/components/Button";
+import ActionLink from "~/components/ActionLink";
+import React from "react";
+
 
 const SignUpForm = () => {
     return (
@@ -31,10 +34,9 @@ const SignUpForm = () => {
                 </div>
 
                 <div className={"flex justify-between"}>
-                    <Button
-                        buttonType={"button"}
-                        label={"Back"}
-                    />
+                    <ActionLink link="/login" linkType="button" extraClassNames="w-fit">
+                        Back
+                    </ActionLink>
                     <Button
                         buttonType={"submit"}
                         label={"Sign up"}

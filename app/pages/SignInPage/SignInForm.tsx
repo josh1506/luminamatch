@@ -1,8 +1,8 @@
 import React from "react";
-import ActionLink from "../../components/ActionLink.tsx";
-import Button from "../../components/Button.tsx";
-import Form from "../../components/Form.tsx";
-import InputText from "../../components/InputText.tsx";
+import Form from "~/components/Form";
+import InputText from "~/components/InputText";
+import ActionLink from "~/components/ActionLink";
+import Button from "~/components/Button";
 
 const SignInForm: React.FC = () => {
     return (
@@ -39,7 +39,7 @@ const SignInForm: React.FC = () => {
                     </div>
 
                     <div className="text-sm leading-6">
-                        <ActionLink link="#" linkType="text">
+                        <ActionLink link="/forgot/password" linkType="text">
                             Forgot password?
                         </ActionLink>
                     </div>

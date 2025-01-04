@@ -1,7 +1,7 @@
 import React from "react";
-import ActionLink from "../../components/ActionLink.tsx";
-import Text from "../../components/TextHeader.tsx";
 import LogoImage from "../../assets/images/common/logo/60.jpg";
+import Text from "~/components/TextHeader";
+import ActionLink from "~/components/ActionLink";
 
 const SignInHeader: React.FC = () => {
     return (
@@ -20,7 +20,7 @@ const SignInHeader: React.FC = () => {
             </Text>
             <Text component={"p"} className="mt-2 text-sm leading-6 text-gray-500">
                 Not a member?{' '}
-                <ActionLink link="#" linkType="text">
+                <ActionLink link="/signup" linkType="text">
                     Create an account
                 </ActionLink>
             </Text>

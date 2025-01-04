@@ -1,6 +1,6 @@
 import React from "react";
-import classNames from "../services/utils/classNames.tsx";
-import {FormProps} from "../interfaces/components/FormProps.tsx";
+import classNames from "~/services/utils/classNames";
+import type {FormProps} from "~/interfaces/components/FormProps";
 
 const Form: React.FC<FormProps> = ({action="#", children, method, ...props}) => {
     return (
