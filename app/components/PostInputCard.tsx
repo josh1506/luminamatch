@@ -1,7 +1,7 @@
 import React from "react";
-import InputTextarea from "./InputTextarea.tsx";
-import Button from "./Button.tsx";
-import ProfileAvatar from "./ProfileAvatar.tsx";
+import Button from "~/components/Button";
+import InputTextarea from "~/components/InputTextarea";
+import ProfileAvatar from "~/components/ProfileAvatar";
 
 const PostInputCard: React.FC = () => {
     return (

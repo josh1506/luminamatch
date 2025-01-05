@@ -1,5 +1,5 @@
 import React from "react";
-import profilePhoto from "../assets/images/example/user/profile_photo.jpg";
+import profilePhoto from "~/assets/images/example/user/profile_photo.jpg";
 
 const ProfileAvatar: React.FC = () => {
     return (

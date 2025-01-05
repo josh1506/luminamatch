@@ -1,5 +1,5 @@
 import React from "react";
-import {InputTextAreaProps} from "../interfaces/components/InputTextAreaProps.tsx";
+import type {InputTextAreaProps} from "~/interfaces/components/InputTextAreaProps";
 
 const InputTextarea : React.FC<InputTextAreaProps> = ({placeholder, onChange}) => {
     return (
