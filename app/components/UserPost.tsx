@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "./Button.tsx";
-import ProfileAvatar from "../components/ProfileAvatar.tsx";
-import parseParagraph from "../services/utils/parsePargraph.tsx";
+import Button from "~/components/Button";
+import ProfileAvatar from "~/components/ProfileAvatar";
+import parseParagraph from "~/services/utils/parsePargraph";
 
 const UserPost: React.FC = () => {
     const userPost = (

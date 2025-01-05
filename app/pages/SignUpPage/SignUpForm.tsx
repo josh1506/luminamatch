@@ -34,9 +34,11 @@ const SignUpForm = () => {
                 </div>
 
                 <div className={"flex justify-between"}>
-                    <ActionLink link="/login" linkType="button" extraClassNames="w-fit">
-                        Back
-                    </ActionLink>
+                    <div>
+                        <ActionLink link="/login" linkType="button">
+                            Back
+                        </ActionLink>
+                    </div>
                     <Button
                         buttonType={"submit"}
                         label={"Sign up"}
