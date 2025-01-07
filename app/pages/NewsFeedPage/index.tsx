@@ -1,6 +1,6 @@
-import NewsFeedLeftSection from "./LeftPanel";
-import NewsFeedMiddleSection from "./MiddlePanel";
-import NewsFeedRightSection from "./RightPanel";
+import NewsFeedLeftSection from "~/pages/NewsFeedPage/LeftPanel"
+import NewsFeedMiddleSection from "~/pages/NewsFeedPage/MiddlePanel"
+import NewsFeedRightSection from "~/pages/NewsFeedPage/RightPanel"
 
 const NewsFeedPage = () => {
     return (

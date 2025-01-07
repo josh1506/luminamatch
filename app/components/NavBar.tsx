@@ -1,14 +1,15 @@
 import React from "react";
 import InputText from "~/components/InputText";
+import ActionLink from "~/components/ActionLink";
 
 const NavBar: React.FC = () => {
     const navList = [
-        "Home",
-        "Profile",
-        "Messages",
-        "Notifications",
-        "Friends",
-        "Settings"
+        {label: "Home", url: "/"},
+        {label: "Messages", url: "/messages"},
+        {label: "Profile", url: "/profile"},
+        // "Notifications",
+        // "Friends",
+        // "Settings"
     ]
 
     return (
@@ -17,19 +18,19 @@ const NavBar: React.FC = () => {
                 <div
                     className="text-2xl font-bold text-white hidden xl:flex xl:w-80 xl:flex-col gap-1 overflow-y-auto pl-4 py-2 tracking-wider"
                 >
-                    <a href="#">
+                    <ActionLink link="/" extraClassNames="text-white hover:text-white">
                         Lumina
                     <span className="text-purple-500">Match</span>
-                    </a>
+                    </ActionLink>
                 </div>
 
                 <nav className="flex flex-grow overflow-y-auto justify-center xl:justify-start">
                     <ul className="flex space-x-6 text-lg lg:space-x-14">
                         {navList.map((navItem, index) => (
                             <li key={index}>
-                                <a href="#" className="text-white hover:text-purple-500 font-semibold tracking-wide">
-                                    {navItem}
-                                </a>
+                                <ActionLink link={navItem.url} extraClassNames="text-white hover:text-purple-500 font-semibold tracking-wide">
+                                    {navItem.label}
+                                </ActionLink>
                             </li>
                         ))}
                     </ul>

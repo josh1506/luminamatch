@@ -1,5 +1,5 @@
 import React from "react";
-import Sponsors from "./Sponsors.tsx";
+import Sponsors from "~/pages/NewsFeedPage/RightPanel/Sponsors";
 
 const RightPanel: React.FC = () => {
     return (

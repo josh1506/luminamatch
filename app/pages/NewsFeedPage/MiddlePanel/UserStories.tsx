@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileAvatar from "../../../components/ProfileAvatar.tsx";
+import ProfileAvatar from "~/components/ProfileAvatar";
 
 const UserStories: React.FC = () => {
     return (

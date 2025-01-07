@@ -1,5 +1,6 @@
 import React from "react";
-import ProfileAvatar from "../../../components/ProfileAvatar.tsx";
+import ProfileAvatar from "~/components/ProfileAvatar";
+import ActionLink from "~/components/ActionLink";
 
 const UserSummary: React.FC = () => {
     return (
@@ -19,7 +20,7 @@ const UserSummary: React.FC = () => {
                     <div className="text-sm">VIP: 6</div>
                 </div>
             </div>
-            <button className="absolute bottom-0 right-0 font-bold">Logout</button>
+            <ActionLink link="/login" extraClassNames="absolute bottom-0 right-0 font-bold text-white hover:text-white">Logout</ActionLink>
         </div>
     )
 }
