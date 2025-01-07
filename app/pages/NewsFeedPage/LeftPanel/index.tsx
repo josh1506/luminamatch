@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import UserSummary from "./UserSummary.tsx";
-import ShortcutDisplay from "./ShortcutDisplay.tsx";
-import {PanelItemProps} from "../../../interfaces/pages/NewsFeedPage/LeftPanel/LeftPanelProps.tsx";
+import ShortcutDisplay from "~/pages/NewsFeedPage/LeftPanel/ShortcutDisplay";
+import UserSummary from "~/pages/NewsFeedPage/LeftPanel/UserSummary";
+import type {PanelItemProps} from "~/interfaces/pages/NewsFeedPage/LeftPanel/LeftPanelProps";
 
 const LeftPanel: React.FC = () => {
     const [showMorePanelItems, setShowMorePanelItems] = useState<boolean>(false)

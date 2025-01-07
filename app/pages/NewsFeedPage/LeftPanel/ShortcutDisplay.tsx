@@ -1,6 +1,6 @@
 import React from "react";
-import LeftPanelItems from "./LeftPanelItems.tsx";
-import {ShortcutDisplayProps} from "../../../interfaces/pages/NewsFeedPage/LeftPanel/ShortcutDisplayProps.tsx";
+import LeftPanelItems from "~/pages/NewsFeedPage/LeftPanel/LeftPanelItems";
+import type {ShortcutDisplayProps} from "~/interfaces/pages/NewsFeedPage/LeftPanel/ShortcutDisplayProps";
 
 const ShortcutDisplay: React.FC<ShortcutDisplayProps> = (
     {

@@ -1,7 +1,11 @@
 import {type RouteConfig, index, route, layout} from "@react-router/dev/routes";
 
 export default [
-    index("routes/home.tsx"),
+    layout("routes/private/home.tsx", [
+        index("routes/private/newsfeed.tsx"),
+        route("messages", "routes/private/messages.tsx"),
+        route("profile", "routes/private/userprofile.tsx"),
+    ]),
 
     // Authentication
     layout("routes/public/auth.tsx", [

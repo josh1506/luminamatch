@@ -1,6 +1,6 @@
 import React from "react";
-import adsNetflix from "../../../assets/images/example/ads/ads-netflix.jpg";
-import adsX from "../../../assets/images/example/ads/ads-x.jpg";
+import adsNetflix from "~/assets/images/example/ads/ads-netflix.jpg";
+import adsX from "~/assets/images/example/ads/ads-x.jpg";
 
 const Sponsors: React.FC = () => {
     const adsList = [

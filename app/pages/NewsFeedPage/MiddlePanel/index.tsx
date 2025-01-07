@@ -1,8 +1,8 @@
 import React from "react";
-import UserPost from "../../../components/UserPost.tsx";
-import PostInputCard from "../../../components/PostInputCard.tsx";
-import UserStories from "./UserStories.tsx";
-import Button from "../../../components/Button.tsx";
+import Button from "~/components/Button";
+import PostInputCard from "~/components/PostInputCard";
+import UserPost from "~/components/UserPost";
+import UserStories from "~/pages/NewsFeedPage/MiddlePanel/UserStories";
 
 const MiddlePanel : React.FC = () => {
     return (
